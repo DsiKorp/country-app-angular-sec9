@@ -20,7 +20,7 @@ export class ByCountryPage {
   countryResource = rxResource({
     // En Angular 21, rxResource ya no recibe request/loader, sino params/stream.
     params: () => ({ query: this.query() }),
-    defaultValue: [] as Country[],
+    //defaultValue: [] as Country[],
     // El stream se ejecuta cada vez que cambian los params, y debe retornar un Observable con los datos.
     // En este caso, cada vez que cambie la query, se hará una nueva búsqueda por capital.
     // Si la query está vacía, retornamos un Observable de array vacío para evitar hacer una petición innecesaria.
