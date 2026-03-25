@@ -1,8 +1,7 @@
 import { Component, input } from '@angular/core';
-import { DecimalPipe } from '@angular/common';
-
 import { Country } from '../../interfaces/country.interface';
-import { RouterLink } from "@angular/router";
+import { DecimalPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'country-list',
@@ -15,5 +14,4 @@ export class CountryList {
   errorMessage = input<string | unknown | null>();
   isLoading = input<boolean>(false);
   isEmpty = input<boolean>(false);
-
 }

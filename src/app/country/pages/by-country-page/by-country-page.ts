@@ -6,6 +6,7 @@ import { Country } from '../../interfaces/country.interface';
 import { CountrySearchInput } from '../../components/country-search-input/country-search-input';
 import { CountryList } from '../../components/country-list/country-list';
 
+
 @Component({
   selector: 'app-by-country-page',
   imports: [CountrySearchInput, CountryList],
@@ -31,6 +32,8 @@ export class ByCountryPage {
       return this.countryService.searchByCountry(params.query);
     },
   });
+
+
 
   // onSearch(value: string): void {
   //   console.log('Search button clicked', value);
