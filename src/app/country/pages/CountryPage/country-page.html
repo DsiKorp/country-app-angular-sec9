@@ -1,6 +1,0 @@
-@if( countryResource.error() ) {
-<app-not-found [errorMessage]="countryResource.error()?.message ?? 'Country not found'" />
-} @else {
-<h1>Country {{ countryCode }}</h1>
-<h3>Country Name: {{ countryResource.value()?.name }}</h3>
-}

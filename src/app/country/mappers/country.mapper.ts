@@ -13,6 +13,8 @@ export class CountryMapper {
       //name: restCountry.translations['spa']?.common ?? 'No spanish name',
       name: restCountry.name?.common || '',
       population: restCountry.population || 0,
+      region: restCountry.region || '',
+      subRegion: restCountry.subregion || '',
     };
   }
 

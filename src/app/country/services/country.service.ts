@@ -24,7 +24,7 @@ export class CountryService {
         console.log('Error fetching ', error);
 
         return throwError(
-          () => new Error(`Error fetching countries for capital: ${query}`)
+          () => new Error(`Country not found for capital: ${query}`)
         );
       })
     );
@@ -42,7 +42,7 @@ export class CountryService {
         console.log('Error fetching ', error);
 
         return throwError(
-          () => new Error(`Error fetching countries for name: ${query}`)
+          () => new Error(`Country not found for name: ${query}`)
         );
       })
     );
@@ -54,11 +54,12 @@ export class CountryService {
     return this.http.get<RESTCountry[]>(url).pipe(
       map((resp) => CountryMapper.mapRestCountriesToCountries(resp)),
       map((countries) => countries.at(0)),
+      delay(2000),
       catchError((error) => {
         console.log('Error fetching ', error);
 
         return throwError(
-          () => new Error(`Error fetching country for alpha code: ${code}`)
+          () => new Error(`Country not found for code: ${code}`)
         );
       })
     );

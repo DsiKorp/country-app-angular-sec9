@@ -7,6 +7,6 @@ export interface Country {
   population: number;
   area: number;
 
-  //region: string;
-  //subRegion: string;
+  region: string;
+  subRegion: string;
 }
